@@ -6,7 +6,7 @@
       <link href="/static/css/base.css" rel="stylesheet">
   </head>
   <body>
-
+    <div id="main-navbar">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -33,17 +33,25 @@
                             <a href="#">任务管理</a>
                         </li>
                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-signup-cta">
+                            <a href="/signup/" data-event-category="Referral to Signup" data-event-action="click"
+                               data-event-label="Signup Menu button / Header">注册</a>
+                        </li>
+                        <li class="">
+                            <a href="/login/" targert="_blank">登录</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
-
-
-        <div class="container theme-showcase" role="main">
-            <div class="jumbotron">ss</div>
-        </div>
-
-        <div id="footer"></div>
-        <script src="/static/js/jquery-3.1.1.js"></script>
-        <script src="/static/js/bootstrap.js"></script>
+    </div>
+    <section>
+        {% block mainbody %}
+        {% endblock %}
+    </section>
+    <footer></footer>
+    <script src="/static/js/jquery-3.1.1.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
   </body>
 </html>
